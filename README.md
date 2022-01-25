@@ -19,5 +19,6 @@ You will find the raw dataset [here](https://github.com/tanjimanasreen/GoogleMap
 ## Built With
 ```
 python 3.7.12
-python-google-places
+python-google-places==1.4.2
+
 ```
