@@ -12,7 +12,9 @@ The restaurant dataset contains name, logitude, latitude, ratings, number of rev
 You will find the raw dataset [here](https://github.com/tanjimanasreen/GoogleMaps-Restaurant-Scraper/tree/main/Dataset/Restaurant-Raw) and final cleaned version [here](https://github.com/tanjimanasreen/GoogleMaps-Restaurant-Scraper/tree/main/Dataset/Restaurant-FInal)
 
 ## Prerequisite
-A Google API key with Google Places API Web Service and Google Maps Geocoding API activated against it. Check [Google Places API](https://developers.google.com/maps/documentation/places/web-service/overview) for more details
+- A Google API key with Google Places API Web Service and Google Maps Geocoding API activated against it. Check [Google Places API](https://developers.google.com/maps/documentation/places/web-service/overview) for more details
+
+- A location list of every Upazilla/Thana along with its District of Bangladesh. In my case I used [Mobile network coverage in Bangladeshi Upazila or Thana](https://www.kaggle.com/mushfiqurrobin/network-coverage) from kaggle to collect the locations around Bangladesh. Here you can see my collected [location](https://github.com/tanjimanasreen/GoogleMaps-Restaurant-Scraper/blob/main/Dataset/locations.csv) list.  
 
 ## Built With
 ```
