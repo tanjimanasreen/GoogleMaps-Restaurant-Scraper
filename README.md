@@ -8,8 +8,10 @@
 In this project I created a scraper in python using Google Places API to scrap Restaurants' information from all over Bangladesh.
 
 ## About Dataset
-The restaurant dataset contains name, logitude, latitude, ratings, number of reviews and price level of each restaurant.
-You will find the raw dataset [here](https://github.com/tanjimanasreen/GoogleMaps-Restaurant-Scraper/tree/main/Dataset/Restaurant-Raw) and final cleaned version [here](https://github.com/tanjimanasreen/GoogleMaps-Restaurant-Scraper/tree/main/Dataset/Restaurant-FInal)
+There are two versions of Dataset here
+- [Raw Restaurant Dataset](https://github.com/tanjimanasreen/GoogleMaps-Restaurant-Scraper/tree/main/Dataset/Restaurant-Raw) : This contains the place ID, name logitude, latitude, ratings, number of reviews and price level and address of each restaurant. Some of the restaurants may not be in Bangladeshi borders.
+- [Final Bangladeshi Restaurant Dataset](https://github.com/tanjimanasreen/GoogleMaps-Restaurant-Scraper/tree/main/Dataset/Restaurant-FInal) : This contains name, logitude, latitude, ratings, number of reviews and price level of each restaurant. All of the restaurants are inside Bangladesh.
+
 
 ## Prerequisite
 - A Google API key with Google Places API Web Service and Google Maps Geocoding API activated against it. Check [Google Places API](https://developers.google.com/maps/documentation/places/web-service/overview) for more details
