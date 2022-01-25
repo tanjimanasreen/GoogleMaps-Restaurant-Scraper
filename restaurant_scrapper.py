@@ -10,10 +10,7 @@ Original file is located at
 ---
 """
 
-# Commented out IPython magic to ensure Python compatibility.
-# %%capture
-# 
-# !pip install python-google-places
+!pip install python-google-places
 
 from googleplaces import GooglePlaces, types, lang
 import time
@@ -88,64 +85,61 @@ print(locations)
 
 """
 
-# Commented out IPython magic to ensure Python compatibility.
-# %%time
-# 
-# for location in locations:
-#   print("---------------------", location, "-----------------------")
-#   query_result = google_places.nearby_search(
-#           location=location, keyword='Restaurant',
-#           radius=radius) 
-# 
-#   if query_result:
-#   
-#     for place in query_result.places:
-#       place.get_details()
-# 
-#       place_id = place.details.get('place_id')
-#       name = place.name
-#       latitude = place.geo_location.get('lat')
-#       longitude = place.geo_location.get('lng')
-#       rating = place.rating
-#       number_of_reviews = place.details.get('user_ratings_total')
-#       affluence = place.details.get('price_level')
-#       address = place.formatted_address
-# 
-#       restaurant_data.append([place_id, name, latitude, longitude, rating, number_of_reviews, affluence, address])
-#       # print(place.details)
-# 
-#     # print(restaurant_data)
-#     print("--------------------- Scrapped Restaurants: ", len(restaurant_data))
-#     time.sleep(5) 
-# 
-#     while query_result.has_next_page_token:
-#         query_result = google_places.nearby_search(location=location, keyword='Restaurant',
-#             radius=radius, pagetoken=query_result.next_page_token)
-#         
-#         for place in query_result.places:
-#           place.get_details()
-# 
-#           place_id = place.details.get('place_id')
-#           name = place.name
-#           latitude = place.geo_location.get('lat')
-#           longitude = place.geo_location.get('lng')
-#           rating = place.rating
-#           number_of_reviews = place.details.get('user_ratings_total')
-#           affluence = place.details.get('price_level')
-#           address = place.formatted_address
-# 
-#           restaurant_data.append([place_id, name, latitude, longitude, rating, number_of_reviews, affluence, address])
-#           # print(place.details)
-#         # print(restaurant_data)  
-#         print("--------------------- Scrapped Restaurants: ", len(restaurant_data))
-#         time.sleep(5) 
-# 
-#   time.sleep(5)
-# 
-# # Dumping the data into a DataFrame
-# df_restaurant = pd.DataFrame(restaurant_data, columns=['place_id', 'name', 'latitude', 'longitude', 'rating', 'number_of_reviews', 'affluence', 'address'])
-# 
-# df_restaurant.to_csv("restaurants.csv", index=False, encoding='utf-8')
+for location in locations:
+  print("---------------------", location, "-----------------------")
+  query_result = google_places.nearby_search(
+          location=location, keyword='Restaurant',
+          radius=radius) 
+
+  if query_result:
+  
+    for place in query_result.places:
+      place.get_details()
+
+      place_id = place.details.get('place_id')
+      name = place.name
+      latitude = place.geo_location.get('lat')
+      longitude = place.geo_location.get('lng')
+      rating = place.rating
+      number_of_reviews = place.details.get('user_ratings_total')
+      affluence = place.details.get('price_level')
+      address = place.formatted_address
+
+      restaurant_data.append([place_id, name, latitude, longitude, rating, number_of_reviews, affluence, address])
+      # print(place.details)
+
+    # print(restaurant_data)
+    print("--------------------- Scrapped Restaurants: ", len(restaurant_data))
+    time.sleep(5) 
+
+    while query_result.has_next_page_token:
+        query_result = google_places.nearby_search(location=location, keyword='Restaurant',
+            radius=radius, pagetoken=query_result.next_page_token)
+        
+        for place in query_result.places:
+          place.get_details()
+
+          place_id = place.details.get('place_id')
+          name = place.name
+          latitude = place.geo_location.get('lat')
+          longitude = place.geo_location.get('lng')
+          rating = place.rating
+          number_of_reviews = place.details.get('user_ratings_total')
+          affluence = place.details.get('price_level')
+          address = place.formatted_address
+
+          restaurant_data.append([place_id, name, latitude, longitude, rating, number_of_reviews, affluence, address])
+          # print(place.details)
+        # print(restaurant_data)  
+        print("--------------------- Scrapped Restaurants: ", len(restaurant_data))
+        time.sleep(5) 
+
+  time.sleep(5)
+
+# Dumping the data into a DataFrame
+df_restaurant = pd.DataFrame(restaurant_data, columns=['place_id', 'name', 'latitude', 'longitude', 'rating', 'number_of_reviews', 'affluence', 'address'])
+
+df_restaurant.to_csv("restaurants.csv", index=False, encoding='utf-8')
 
 """# Data Preparation
 
@@ -209,3 +203,12 @@ restaurant_df[restaurant_df['affluence'].notna()==True]
 final_df = restaurant_df[['name',	'latitude',	'longitude',	'rating',	'number_of_reviews',	'affluence']]
 
 final_df.to_csv("bangladesh_restaurants.csv", index=False, encoding='utf-8')
+
+"""# Remarks
+
+
+---
+
+**The dataset may contain some anomalies such as Tea Stores or Food Stores that are also registered under Restaurant keyword. More extensive cleaning can be done to handle such issues in the future.**
+
+"""
