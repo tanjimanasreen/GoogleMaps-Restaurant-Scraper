@@ -18,6 +18,19 @@ There are two versions of Dataset here
 
 - A location list of every Upazilla/Thana along with its District of Bangladesh. In my case I used [Mobile network coverage in Bangladeshi Upazila or Thana](https://www.kaggle.com/mushfiqurrobin/network-coverage) from kaggle to collect the locations around Bangladesh. Here you can see my collected [location](https://github.com/tanjimanasreen/GoogleMaps-Restaurant-Scraper/blob/main/Dataset/locations.csv) list.  
 
+## Preview 
+### Most Popular Restaurant Names
+![](https://github.com/tanjimanasreen/GoogleMaps-Restaurant-Scraper/blob/main/files/English_word_cloud.png)
+
+### Restaurant Heat Map
+![](https://github.com/tanjimanasreen/GoogleMaps-Restaurant-Scraper/blob/main/files/heatmap.png)
+
+### Mostly Reviewed Restaurants' Area
+![](https://github.com/tanjimanasreen/GoogleMaps-Restaurant-Scraper/blob/main/files/circlemap.png)
+
+### Expensive Restaurants' Area
+![](https://github.com/tanjimanasreen/GoogleMaps-Restaurant-Scraper/blob/main/files/expensivemap.png)
+
 ## Built With
 ```
 python 3.7.12
