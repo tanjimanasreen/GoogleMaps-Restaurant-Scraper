@@ -1,11 +1,11 @@
 # Scraping Bangladeshi Restaurants from GoogleMaps
 ---
 
-[![Made with Jupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?logo=Jupyter)](https://jupyter.org/try) [![nbviewer](https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.org/github/tanjimanasreen/GoogleMaps-Restaurant-Scraper/blob/main/Restaurant_Scrapper.ipynb)
+[![Made with Jupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?logo=Jupyter)](https://jupyter.org/try) [![nbviewer](https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.org/github/tanjimanasreen/GoogleMaps-Restaurant-Scraper/blob/main/Restaurant_Scrapper.ipynb) [![Open in HTML](https://img.shields.io/badge/Html-Open%20Notebook-blue?logo=HTML5)](https://nbviewer.org/github/tanjimanasreen/GoogleMaps-Restaurant-Scraper/blob/main/Restaurant_Scrapper.html)
 
 ## Summary
 
-In this project I created a scraper in python using Google Places API to scrap Restaurants' information from all over Bangladesh.
+In this project I created a scraper in python using Google Places API to scrap Restaurants' information from all over Bangladesh. Moreover added some visualizations according to their ratings, reviews and price level.
 
 ## About Dataset
 There are two versions of Dataset here
@@ -22,5 +22,8 @@ There are two versions of Dataset here
 ```
 python 3.7.12
 python-google-places 1.4.2
+folium 0.8.3
+geopandas 0.10.2
+wordcloud 1.5.0
 
 ```
